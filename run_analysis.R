@@ -72,3 +72,4 @@ result$name[result$name=="bodygyrojerkmag"]<-"bodyangularaccelerationjerkmagnitu
 final_results <- result %>%
   group_by(activity_name, name, type, domain, direction)%>%
   summarise(average = mean(value, na.rm = TRUE))
+write.table(final_results, file = "tidy_data_set.txt", row.name=FALSE)

@@ -23,9 +23,13 @@ What I did:
 
 3. I created a single dataframe from the two databases from step 2.
 4. I merged the dataframe from step 3 with the activity_labels dataframe creating a new dataframe with one additional column "activity_name"
-5. Created a vector V that contained all the column names that contained "mean()" or "std()"
+5. Created a vector V that contained all the column names that contained "mean()" or "std()" only
 6. Subsetted the dataframe from step 4 so that it contained only the columns from V and the column "activity_name"
-7. Cleaned up the remaining column names 
+7. Cleaned up the remaining column names:
+             a. changed all the letters to lower case
+             b. removed parentheses "()"
+             c. changed the names of the files that ended in "mean" or "std" to end in "mean-None" and "std-None" respectively, which took care of the missing direction "X", "Y" or "Z"   This way all column names now include the variable "direction".
+             d. changed the prefix "t" into "t-" and "f" into "f-" which represented the variable "domain" within each column name.   By changing these prefixes I made it possible for the column names to be split up easier into separate variables.  
 
 
 

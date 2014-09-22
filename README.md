@@ -49,6 +49,10 @@ So, to tidy all this up:
 2. I replaced "t" by "time" and "f" by "frequency" in  the "domain" column
 
 
+Finally, I used the "dplyr" package  to group the data frame by "activity_name", "name", "type", "domain" and "direction" and calculated the average value of "value" for each group by using summarise().   
+
+Saved the results as "tidy_data_set.txt"
+
 
 
 
